@@ -2,7 +2,7 @@
 
 ## **Proof Of Concept**
 
-This C# code was written to demonstrate how the vulnerabilities found in the hMailServer software can be exploited. 
+This C# code was written to demonstrate how the vulnerabilities found in the hMailServer software regarding it password storage can be exploited. 
 It will attempt to enumerate from the registry where the important files are stored, and if not found will default to some hardcoded paths. 
 
 The files of interest are,
@@ -30,7 +30,7 @@ Then it will zip up the files, both the decrypted ones and the originals for fur
 
 1. I do **NOT** know C#. I had never touched it before this project. SO much of this is vibes spaghetti, as I was very much in 'Rapid Prototyping' mode.
 2. This was largely developed on an ARM64 mac and thus tested on an ARM64 Windows 11 virtual machine. 
-3. This was tested ONLY on the default install using the internal database. This doesn't adequately address more custom installations. However, the passwords for a custom installation will largely be the same- This tool won't handle the exfiltration of an external custom database. 
+3. This was tested ONLY on the default install using the internal database. This doesn't adequately address more custom installations. However, the storage of passwords for a custom installation will largely be the same- This tool won't handle the exfiltration of an external custom database. 
    
 As such i do **NOT** make any guarantees about the functionality of this tool. "It Works On My Machine." <3
    
@@ -420,7 +420,7 @@ The hardcoded decryption function will decrypt that string in the `<encryptedPas
 
 ## **Special Thanks !!**
 
-Thank you Adele {Last Name} for pointing me to the docs for the initial discovery of one of these vulnerabilities elsewhere and showing me how to look for it in new places! 
+Thank you [Adele Miller](https://www.linkedin.com/in/aamiller/) for pointing me to the blog post for the initial discovery of the vulnerability with the hardcoded salt and showing me how to look for it in new places! 
 
 Thank You Scott Contini for your blog post which further clarified the Ivan Medvedev problem.
 
