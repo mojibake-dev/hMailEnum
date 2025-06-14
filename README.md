@@ -25,6 +25,19 @@ Then it will decrypt the database, use the [ErikEJ](https://github.com/ErikEJ)/[
 Then it will zip up the files, both the decrypted ones and the originals for further inspection, to make exfiltration easier. 
 
 --- 
+## **Compilation**
+
+To compile as one standalone binary, the recommended command is as follows.
+```sh
+dotnet publish -c Release -r <ARCHITECTURE> --self-contained true /p:PublishSingleFile=true /p:PublishTrimmed=true hMailEnum.csproj
+```
+
+with possible Architecture values being 
+
+'win-arm64'
+'win-amd64'
+
+---
 
 ## **Disclaimer**
 
