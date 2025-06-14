@@ -2,7 +2,7 @@
 
 ## **Proof Of Concept**
 
-This C# code was written to demonstrate how the vulnerabilities found in the hMailServer software regarding it password storage can be exploited. 
+This C# code was written to demonstrate how the vulnerabilities found in the hMailServer versions 5.6.8 and 5.6.9beta software regarding it password storage can be exploited. 
 It will attempt to enumerate from the registry where the important files are stored, and if not found will default to some hardcoded paths. 
 
 The files of interest are,
